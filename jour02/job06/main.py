@@ -14,19 +14,12 @@ db = mysql.connector.connect(
 cur = db.cursor()
 
 #exécuter le curseur avec la méthode execute() et transmis la requête SQL
-cur.execute("SELECT nom, superficie From etage")
+cur.execute("SELECT SUM(capacite) From salles")
 
+res = cur.fetchall()[0]
 
-res = cur.fetchall()
+# Affichage du résultat en console
+print("La somme des capacités des salles est de:", res)
 
-#initialiser la variable total_superficie à 0
-total_superficie = 0
-
-#itérer sur les tuples de la liste res pour calculer la superficie totale
-for nom, superficie in res:
-    total_superficie += superficie
-
-print("La superficie totale est de", total_superficie)
-
-#fermer le curseur et la connexion à la base de données
+# Fermeture du curseur et de la connexion
 cur.close()
