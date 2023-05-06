@@ -1,0 +1,27 @@
+
+ecrire ligne de commande Sur terminal SQL 
+
+Créer une base de données nommée “boutique” 
+
+-table “produit” possède les champs suivants :
+	- id, primary key, integer, auto-increment
+	- nom, varchar (255)
+	- description, text
+	- prix, int
+	- quantité, int
+	- id_catégorie, int
+
+-La table “categorie” possède les champs suivants :
+	- id, primary key, int, auto-increment
+	- nom, varchar(255)
+
+Insérer des produits dans la table “produits” et différentes catégories.
+
+affiche dans console python avec import mysql.connector
+
+
+importer interface graphique from tkinter import *
+créer un tableau de bord, permettant la gestion des stocks.
+	-afficher la liste complète des produits en stock
+	-L’utilisateur doit avoir la possibilité d’ajouter un produit, de supprimer un produit et de modifier le
+produit (stock, prix, …).
